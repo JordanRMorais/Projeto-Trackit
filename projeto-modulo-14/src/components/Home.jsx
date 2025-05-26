@@ -147,7 +147,6 @@ bottom:0;
 button {
     width: 188px;
     height: 65px;
-    border: ;
     background-color: orange;
     font-size: 18px;
     font-family: Lexend Deca;
@@ -174,7 +173,7 @@ input {
     font-family: Lexend Deca;
     margin-top: 10px;
     border-radius: 5px;
-    border: 1px solid rgba(212, 212, 212, 1)
+    border: 1px solid rgba(212, 212, 212, 1);
 }
 
 ::placeholder{
@@ -195,7 +194,7 @@ button{
     width: 30px;
     height: 30px;
     color: rgba(212, 212, 212, 1);
-    border: 1px solid rgba(212, 212, 212, 1)
+    border: 1px solid rgba(212, 212, 212, 1);
     
 }
 

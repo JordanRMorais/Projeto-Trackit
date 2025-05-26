@@ -20,7 +20,7 @@ return (
 
 <p>Já tem uma conta? Faça login!</p>
 </ContainerCadastro> 
-)
+) 
 
 }
 
