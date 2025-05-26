@@ -3,27 +3,29 @@ import logotipo from "../images/Logo.png"
 
 
 
-export default function Login (){
+export default function Cadastro (){
 
 return (
-<ContainerLogin>
+<ContainerCadastro>
 
 <img src={logotipo}></img>
 
 <Dados>
     <input placeholder="email"></input>
     <input placeholder="senha"></input>
-    <button>Entrar</button>
+    <input placeholder="nome"></input>
+    <input placeholder="foto"></input>
+    <button>Cadastrar</button>
 </Dados>
 
-<p>Não tem uma conta? Cadastre-se!</p>
-</ContainerLogin> 
+<p>Já tem uma conta? Faça login!</p>
+</ContainerCadastro> 
 )
 
 }
 
 
-const ContainerLogin = styled.div `
+const ContainerCadastro = styled.div `
 
 width: 375px;
 height: 675px;
@@ -45,7 +47,7 @@ p {
 
 const Dados = styled.div `
 width: 310px;
-height: 170px;
+height: 280px;
 display: flex;
 flex-direction: column;
 align-items: center;
