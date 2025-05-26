@@ -1,9 +1,17 @@
 import styled from "styled-components";
-import logotipo from "../images/Logo.png"
+import logotipo from "../images/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function Login (){
+
+const navigate = useNavigate();
+
+function IrParaCadastro() {
+  navigate("/cadastro");
+}
+
 
 return (
 <ContainerLogin>
@@ -16,7 +24,7 @@ return (
     <button>Entrar</button>
 </Dados>
 
-<p>Não tem uma conta? Cadastre-se!</p>
+<p onClick={IrParaCadastro}>Não tem uma conta? Cadastre-se!</p>
 </ContainerLogin> 
 )
 
@@ -25,8 +33,8 @@ return (
 
 const ContainerLogin = styled.div `
 
-width: 375px;
-height: 675px;
+width: 100%;
+height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -38,6 +46,7 @@ p {
     text-decoration: underline;
     color: rgba(82, 182, 255, 1);
     padding-top: 30px;
+    cursor: pointer;
 
 }
 
