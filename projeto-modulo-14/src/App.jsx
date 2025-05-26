@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Login from './components/Login'
 import Cadastro from './components/Cadastro'
+import Home from './components/Home'
 
 
 export default function App() {
@@ -8,11 +9,9 @@ export default function App() {
   return (
   <Container>
   {/* <Login/> */}
-  <Cadastro/>
+  {/* <Cadastro/> */}
+  <Home/>
  
-
-
-
   </Container>
   )
  
