@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import EventAvailableSharpIcon from '@mui/icons-material/EventAvailableSharp';
 
 export default function Home (){
 
@@ -10,11 +12,11 @@ return (
     </Topo>
 
     <Conteudo>
-        <AddHabitos>
+        <MenuSuperior>
             <h1>Meus Hábitos</h1>
-            <button>+</button>
-        </AddHabitos>
-        <Habito>
+            <button>+</button> 
+        </MenuSuperior>
+        <AddHabitos>
             <input placeholder="nome do hábito"></input>
             <DiasdaSemana>
                 <button>D</button>
@@ -33,16 +35,27 @@ return (
                     <button>Salvar</button>
                 </BotaoSalvar>
             </BotaoConfirmacao>
-                       
+        </AddHabitos>
+        <Habito>
+            <h1>Hábito inserido no input</h1>
+            <DiasdaSemana>
+                <button>D</button>
+                <button>S</button>
+                <button>T</button>
+                <button>Q</button>
+                <button>Q</button>
+                <button>S</button>
+                <button>S</button>
+            </DiasdaSemana>     
         </Habito>
     <h1>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</h1>
     </Conteudo>
     <MenuInferior>
         <button>
-        Hábitos
+        <CalendarMonthIcon/> Hábitos
         </button>
         <button>
-        Hoje
+        <EventAvailableSharpIcon/>Hoje
         </button>
         
     </MenuInferior>
@@ -93,7 +106,7 @@ h1 {
 const Conteudo = styled.div`
 
 width:375px;
-height:520px;
+height:100%;
 background-color: #f2f2f2;
 display: flex;
 flex-direction: column;
@@ -108,7 +121,7 @@ h1 {
 }
 
 `
-const AddHabitos = styled.div `
+const MenuSuperior = styled.div `
 display: flex;
 justify-content: space-between;
 
@@ -150,14 +163,18 @@ button {
     background-color: orange;
     font-size: 18px;
     font-family: Lexend Deca;
-    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(82, 182, 255, 1);
+     
 }
 
 
-;
+
 `
 
-const Habito = styled.div `
+const AddHabitos = styled.div `
 width: 340px;
 height: 180px;
 background-color: white;
@@ -229,4 +246,14 @@ button{
     cursor: pointer;
     font-size: 16px;
 }
+`
+const Habito = styled.div `
+width: 340px;
+height: 90px;
+background-color: white;
+margin-left: 20px;
+display: flex;
+flex-direction: column;
+margin-top: 20px;
+
 `
