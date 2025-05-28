@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import styled from 'styled-components'
-import Login from './components/Login'
-import Cadastro from './components/Cadastro'
-import Home from './components/Home'
+import styled from 'styled-components';
+import Login from './components/Login';
+import Cadastro from './components/Cadastro';
+import Home from './components/Home';
+import Hoje from './components/Hoje';
 import { useState } from 'react';
 import UserContext from "./contexts/UserContext";
 
@@ -21,7 +22,8 @@ export default function App() {
         <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/cadastro" element={<Cadastro />} />
-            <Route path="/hoje" element={<Home />} />
+            <Route path="/habitos" element={<Home />} />
+            <Route path="/hoje" element={<Hoje />} />
         </Routes>
       </Container>
     </BrowserRouter>

@@ -93,7 +93,7 @@ return (
 <ContainerHome>
     <Topo>
         <h1>TrackIt</h1>
-        <img></img>
+        <img src={user?.image} alt="Foto do usuário" />
     </Topo>
 
     <Conteudo>
@@ -202,7 +202,6 @@ img {
     width: 51px;
     height: 51px;
     border-radius: 98px;
-    background-color: red;
     margin-right: 20px;
 
 }
