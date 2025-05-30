@@ -2,6 +2,7 @@ import styled from "styled-components";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EventAvailableSharpIcon from '@mui/icons-material/EventAvailableSharp';
 import { useNavigate } from "react-router-dom";
+import CheckIcon from '@mui/icons-material/Check';
 
 import axios from "axios";
 import { useEffect, useContext, useState } from "react";
@@ -27,22 +28,31 @@ return (
 
     <Conteudo>
         <MenuSuperior>
-        Data do dia
+        <h1>Data do dia</h1>
         </MenuSuperior>
    
-        {/* <Habito>
-    
-        </Habito> */}
+        <Habito>
+            <Dados>
+                <h1>Título</h1>
+                <p>Sequência atual:</p>
+                <p>Seu recorde:</p>
+            </Dados>
+            <BotaoCheck>
+                <button>
+                    <CheckIcon style={{ fontSize: "40px" }}/>
+                </button>
+            </BotaoCheck>
+        </Habito>
   
     </Conteudo>
 
     <MenuInferior>
-        <BotaoHabitos>
+        <BotaoHabitos onClick={IrParaHabitos}>
             <button>
             <CalendarMonthIcon/> Hábitos
             </button>
         </BotaoHabitos>
-        <BotaoHoje onClick={IrParaHabitos}>
+        <BotaoHoje>
             <button>
             <EventAvailableSharpIcon/>Hoje
             </button>
@@ -86,7 +96,7 @@ h1 {
 const Conteudo = styled.div`
 
 width:375px;
-height:100%;
+height:100vh;
 background-color: #f2f2f2;
 display: flex;
 flex-direction: column;
@@ -131,9 +141,9 @@ button {
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(82, 182, 255, 1);
+    background-color: white;
     border: none;
-    color: white;
+    color: rgba(212, 212, 212, 1);
     cursor: pointer;
 }
 `
@@ -146,20 +156,60 @@ button {
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    color:rgba(212, 212, 212, 1);
+    background-color: rgba(82, 182, 255, 1);
+    color:white;
     border:none;
     cursor: pointer;
      
 }
 `
 const Habito = styled.div `
-width: 340px;
-height: 100px;
-background-color: white;
-margin-left: 20px;
-display: flex;
-flex-direction: column;
-margin-top: 20px;
+  width: 320px;
+  height: 80px;
+  background-color: white;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  `
+
+const BotaoCheck = styled.div `
+   button {
+    width: 70px;
+    height: 70px;
+    background-color: #8FC549;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    
+} 
+`
+
+
+const Dados = styled.div `
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+h1 {
+    font-size: 20px;
+    color: rgba(102, 102, 102, 1);
+    font-family: Lexend Deca;
+    margin-left: 10px;
+
+}
+
+p {
+    font-size: 13px;
+    color: rgba(102, 102, 102, 1);
+    font-family: Lexend Deca;
+    margin-left: 10px;
+
+}
 
 `
+
