@@ -27,25 +27,18 @@ function enviarCadastro(e) {
     };
 
 axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up", body)
-    .then(() => {
-    navigate("/");
-    })
-    .catch((err) => {
-    alert(err.response.data.message);
-    setLoading(false);
-    });
+    .then(() => {navigate("/");})
+    .catch((err) => {alert(err.response.data.message);setLoading(false);});
     }
 
 function IrParaLogin (){
     navigate("/");
 } 
 
-
 return (
 <ContainerCadastro>
-
     <img src={logotipo}></img>
-<form onSubmit={enviarCadastro}>
+    <form onSubmit={enviarCadastro}>
     <Dados>
         <input
             type="email"
@@ -95,13 +88,9 @@ return (
 
 <p onClick={IrParaLogin}>Já tem uma conta? Faça login!</p>
 </ContainerCadastro> 
-) 
-
-}
-
+)}
 
 const ContainerCadastro = styled.div `
-
 width: 100%;
 height: 100%;
 display: flex;
@@ -116,9 +105,7 @@ p {
     color: rgba(82, 182, 255, 1);
     padding-top: 30px;
     cursor: pointer;
-
 }
-
 `
 
 const Dados = styled.div `
@@ -133,8 +120,7 @@ padding-top: 20px;
 input {
     width: 300px;
     height: 45px;
-    border: 1px solid rgba(212, 212, 212, 1);
-      
+    border: 1px solid rgba(212, 212, 212, 1);  
 } 
 
 ::placeholder {
@@ -156,7 +142,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 `

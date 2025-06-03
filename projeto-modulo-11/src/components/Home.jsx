@@ -17,21 +17,17 @@ export default function Home (){
     const navigate = useNavigate(); 
 
     useEffect(() => {
-        if (!user?.token) return;
+    if (!user?.token) return;
 
-        const config = {
-            headers: {
-                Authorization: `Bearer ${user.token}`
-            }
-        };
+    const config = {
+        headers: {
+            Authorization: `Bearer ${user.token}`
+            }};
 
-        axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits", config)
-            .then((res) => {
-                setHabito(res.data);
-            })
-            .catch((err) => {
-                alert("Erro ao carregar hábitos");
-            });
+    axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits", config)
+        .then((res) => { setHabito(res.data);})
+        .catch((err) => { alert("Erro ao carregar hábitos");
+        });
     }, [user]);
   
     function IrParaHoje (){
@@ -41,7 +37,7 @@ export default function Home (){
     function SelecionarDia(index) {
         if (diasSelecionados.includes(index)) {
             setDiasSelecionados(diasSelecionados.filter((day) => day !== index));
-        } 
+            } 
         
         else {
             setDiasSelecionados([...diasSelecionados, index]);
@@ -81,13 +77,11 @@ export default function Home (){
                 setLimpaForm(false);
                 setCarregando(false);
             })
-            .catch(() => {
+        .catch(() => {
                 alert("Erro ao salvar hábito");
                 setCarregando(false);
             });
         }
-
-
 
 return (
 <ContainerHome>
@@ -138,7 +132,7 @@ return (
             <h1>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</h1>
             )}
 
-    {habito.map((habito) => (
+        {habito.map((habito) => (
         <Habito key={habito.id}>
             <h1>{habito.name}</h1>
             <DiasdaSemana>
@@ -179,7 +173,6 @@ return (
 
 
 const ContainerHome = styled.div `
-
 width: 100%;
 height: 100%;
 display: flex;
@@ -188,7 +181,6 @@ align-items: center;
 `
 
 const Topo = styled.div `
-
 width: 100%;
 height: 70px;
 background-color:rgba(18, 107, 165, 1);
@@ -197,13 +189,11 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 
-
 img {
     width: 51px;
     height: 51px;
     border-radius: 98px;
     margin-right: 20px;
-
 }
 
 h1 {
@@ -211,17 +201,14 @@ h1 {
     color: white;
     font-family: Playball;
     margin-left: 20px;
-
 }
 `
 const Conteudo = styled.div`
-
 width:100%;
 height:100%;
 background-color: #f2f2f2;
 display: flex;
 flex-direction: column;
-
 
 h1 {
     font-size:18px;
@@ -230,19 +217,16 @@ h1 {
     color: rgba(102, 102, 102, 1);
     margin-top: 20px;
 }
-
 `
 const MenuSuperior = styled.div `
 display: flex;
 justify-content: space-between;
-
 
 h1 {
     font-size:23px;
     font-family: Lexend Deca;
     color: rgba(18, 107, 165, 1);
     margin-top: 20px;
-
 }
 
 button {
@@ -254,8 +238,6 @@ button {
     font-size: 28px;
     color: white;
     margin: 20px;
-
-
 }
 
 `
@@ -264,7 +246,6 @@ display:flex;
 position: fixed;
 bottom:0;
 width: 100%;
-
 `
 const BotaoHabitos = styled.div `
 button {
@@ -294,7 +275,6 @@ button {
     color:rgba(212, 212, 212, 1);
     border:none;
     cursor: pointer;
-     
 }
 `
 
@@ -321,7 +301,6 @@ input {
     padding-left: 10px;
     color: rgba(219, 219, 219, 1);
 }
-
 `
 
 const DiasdaSemana = styled.div `
@@ -336,16 +315,13 @@ button{
     height: 30px;
     color: rgba(212, 212, 212, 1);
     border: 1px solid rgba(212, 212, 212, 1);
-    
 }
-
 `
 
 const BotaoConfirmacao = styled.div `
 display: flex;
 justify-content: flex-end;
 padding: 20px;
-
 `
 const BotaoCancelar = styled.div `
 button{

@@ -25,13 +25,10 @@ export default function Hoje (){
     };
             
         axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/today", config)
-            .then((res) => {
-                setHabitosHoje(res.data);
-            })
-            .catch((err) => {
-                console.error("Erro ao buscar hábitos de hoje:", err.response?.data);
+            .then((res) => { setHabitosHoje(res.data);})
+            .catch((err) => {console.error("Erro ao buscar hábitos de hoje:", err.response?.data);
             });
-    }, [user.token]);
+        }, [user.token]);
     
     function toggleHabito(habito) {
         const config = {
@@ -44,11 +41,11 @@ export default function Hoje (){
         axios.post(url, {}, config)
             .then(() => {
                 axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/today", config)
-                    .then(res => setHabitosHoje(res.data));
-            })
+                .then(res => setHabitosHoje(res.data));
+                })
             .catch(err => {
                 console.error("Erro ao atualizar hábito:", err.response?.data);
-            });
+                });
     }
 
     function IrParaHabitos (){
@@ -56,8 +53,6 @@ export default function Hoje (){
     }
 
     const hoje = dayjs().locale('pt-br').format('dddd, DD/MM');
-
-
 
 return (
 <ContainerHoje>
@@ -115,7 +110,6 @@ return (
 
 
 const ContainerHoje = styled.div `
-
 width: 100%;
 height: 100%;
 display: flex;
@@ -124,7 +118,6 @@ align-items: center;
 `
 
 const Topo = styled.div `
-
 width: 100%;
 height: 70px;
 background-color:rgba(18, 107, 165, 1);
@@ -140,7 +133,6 @@ h1 {
     margin-left: 20px;
 
 }
-
 img {
     width: 51px;
     height: 51px;
@@ -149,17 +141,13 @@ img {
 
 }
 
-
-
 `
 const Conteudo = styled.div`
-
 width:100%;
 height:100vh;
 background-color: #f2f2f2;
 display: flex;
 flex-direction: column;
-
 
 h1 {
     font-size:18px;
@@ -174,7 +162,6 @@ const MenuSuperior = styled.div `
 display: flex;
 justify-content: space-between;
 
-
 h1 {
     font-size:23px;
     font-family: Lexend Deca;
@@ -183,14 +170,12 @@ h1 {
 
 }
 
-
 `
 const MenuInferior = styled.div `
 width: 100%;
 display:flex;
 position: fixed;
 bottom:0;
-
 `
 const BotaoHabitos = styled.div `
 button {
@@ -220,7 +205,6 @@ button {
     color:white;
     border:none;
     cursor: pointer;
-     
 }
 `
 const Habito = styled.div `
@@ -244,13 +228,9 @@ const BotaoCheck = styled.div `
     border-radius: 5px;
     color: white;
     cursor: pointer;
-    
 } 
 `
-
-
 const Dados = styled.div `
-
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -260,16 +240,12 @@ h1 {
     color: rgba(102, 102, 102, 1);
     font-family: Lexend Deca;
     margin-left: 10px;
-
 }
-
 p {
     font-size: 13px;
     color: rgba(102, 102, 102, 1);
     font-family: Lexend Deca;
     margin-left: 10px;
-
 }
-
 `
 

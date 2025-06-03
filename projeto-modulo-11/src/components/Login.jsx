@@ -46,45 +46,44 @@ export default function Login ()
 return (
 <ContainerLogin>
 
-<img src={logotipo} alt="logo"/>
+    <img src={logotipo} alt="logo"/>
     <form onSubmit={FazerLogin}>
-        <Dados>
-            <input placeholder="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            disabled={loading}
-            required/>
-            
-            <input placeholder="senha"
-            type="password"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-            required/>
 
-            <button type="submit" disabled={loading}>
-                {loading ? <Oval
-                    visible={true}
-                    height="30"
-                    width="30"
-                    color="#FFFFFF"
-                    ariaLabel="oval-loading"
-                    wrapperStyle={{}}
-                    wrapperClass=""
-                    /> : "Entrar"}
-            </button>
-        </Dados>
-     </form>
-<p onClick={IrParaCadastro}>Não tem uma conta? Cadastre-se!</p>
+    <Dados>
+        <input placeholder="email"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        disabled={loading}
+        required/>
+        
+        <input placeholder="senha"
+        type="password"
+        value={senha}
+        onChange={(e) => setSenha(e.target.value)}
+        required/>
+
+        <button type="submit" disabled={loading}>
+            {loading ? <Oval
+                visible={true}
+                height="30"
+                width="30"
+                color="#FFFFFF"
+                ariaLabel="oval-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                /> : "Entrar"}
+        </button>
+    </Dados>
+
+    </form>
+    <p onClick={IrParaCadastro}>Não tem uma conta? Cadastre-se!</p>
     
 </ContainerLogin> 
-)
-
-}
+)}
 
 
 const ContainerLogin = styled.div `
-
 width: 100%;
 height: 100%;
 display: flex;
@@ -99,11 +98,8 @@ p {
     color: rgba(82, 182, 255, 1);
     padding-top: 30px;
     cursor: pointer;
-
 }
-
 `
-
 const Dados = styled.div `
 width: 310px;
 height: 170px;
@@ -117,7 +113,6 @@ input {
     width: 300px;
     height: 45px;
     border: 1px solid rgba(212, 212, 212, 1);
-      
 } 
 
 ::placeholder {
@@ -136,7 +131,5 @@ button {
     border: none;
     border-radius: 5px;
     font-family: "Lexend Deca";
-
 }
-
 `
