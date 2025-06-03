@@ -4,19 +4,13 @@ import Login from './components/Login';
 import Cadastro from './components/Cadastro';
 import Home from './components/Home';
 import Hoje from './components/Hoje';
-import { useState } from 'react';
-import UserContext from "./contexts/UserContext";
-
+import { UserProvider } from "./contexts/UserContext";
 
 
 export default function App() {
-
-  const [user,setUser] = useState(null);
-
-
-  
+    
   return (
-  <UserContext.Provider value = {{user, setUser}}>
+  <UserProvider>
     <BrowserRouter>
       <Container>
         <Routes>
@@ -27,10 +21,9 @@ export default function App() {
         </Routes>
       </Container>
     </BrowserRouter>
-  </UserContext.Provider>
+  </UserProvider>
   )
  
-  
 }
 const Container = styled.div `
 max-width: 600px;

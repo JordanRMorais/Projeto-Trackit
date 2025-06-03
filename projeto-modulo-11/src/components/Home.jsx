@@ -189,7 +189,7 @@ align-items: center;
 
 const Topo = styled.div `
 
-width: 375px;
+width: 100%;
 height: 70px;
 background-color:rgba(18, 107, 165, 1);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -216,7 +216,7 @@ h1 {
 `
 const Conteudo = styled.div`
 
-width:375px;
+width:100%;
 height:100%;
 background-color: #f2f2f2;
 display: flex;
@@ -258,20 +258,17 @@ button {
 
 }
 
-
-
-
-
 `
 const MenuInferior = styled.div `
 display:flex;
 position: fixed;
 bottom:0;
+width: 100%;
 
 `
 const BotaoHabitos = styled.div `
 button {
-    width: 188px;
+    width: 50vw;
     height: 65px;
     font-size: 18px;
     font-family: Lexend Deca;
@@ -286,7 +283,7 @@ button {
 `
 const BotaoHoje = styled.div `
 button {
-    width: 188px;
+    width: 50vw;
     height: 65px;
     font-size: 18px;
     font-family: Lexend Deca;
