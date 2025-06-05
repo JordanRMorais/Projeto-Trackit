@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logotipo from "../images/Logo.png"
 import { useState } from "react";
-import { Oval } from 'react-loader-spinner';
+import { ClipLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -73,15 +73,7 @@ return (
             required
           />
         <button type="submit" disabled={loading}>
-            {loading ? <Oval
-                        visible={true}
-                        height="30"
-                        width="30"
-                        color="#FFFFFF"
-                        ariaLabel="oval-loading"
-                        wrapperStyle={{}}
-                        wrapperClass=""
-                        /> : "Cadastrar"}
+            {loading ? <ClipLoader color="#ffffff" size={35}/> : "Cadastrar"}
         </button>
     </Dados>
 </form>

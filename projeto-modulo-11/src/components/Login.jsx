@@ -2,7 +2,7 @@ import styled from "styled-components";
 import logotipo from "../images/Logo.png";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
-import { Oval } from 'react-loader-spinner';
+import { ClipLoader } from "react-spinners";
 import axios from "axios";
 import UserContext from "../contexts/UserContext";
 
@@ -64,15 +64,7 @@ return (
         required/>
 
         <button type="submit" disabled={loading}>
-            {loading ? <Oval
-                visible={true}
-                height="30"
-                width="30"
-                color="#FFFFFF"
-                ariaLabel="oval-loading"
-                wrapperStyle={{}}
-                wrapperClass=""
-                /> : "Entrar"}
+            {loading ? <ClipLoader color="#ffffff" size={35} /> : "Entrar"}
         </button>
     </Dados>
 

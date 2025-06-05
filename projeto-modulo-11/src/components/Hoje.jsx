@@ -4,7 +4,6 @@ import EventAvailableSharpIcon from '@mui/icons-material/EventAvailableSharp';
 import CheckIcon from '@mui/icons-material/Check';
 import dayjs from "dayjs";
 import 'dayjs/locale/pt-br';
-
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useContext, useState } from "react";
