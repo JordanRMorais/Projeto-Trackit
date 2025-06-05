@@ -172,14 +172,16 @@ h1 {
 
 `
 const MenuInferior = styled.div `
+max-width: 600px;
 width: 100%;
 display:flex;
 position: fixed;
 bottom:0;
 `
 const BotaoHabitos = styled.div `
+width: 50%;
 button {
-    width: 50vw;
+    width: 100%;
     height: 65px;
     font-size: 18px;
     font-family: Lexend Deca;
@@ -193,8 +195,9 @@ button {
 }
 `
 const BotaoHoje = styled.div `
+width: 50%;
 button {
-    width: 50vw;
+    width: 100%;
     height: 65px;
     font-size: 18px;
     font-family: Lexend Deca;
